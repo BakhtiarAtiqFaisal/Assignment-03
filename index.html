@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 3</title>
+    <title>Assignment-03</title>
     <!-- google font  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/cdfcbce1d8.js" crossorigin="anonymous"></script>
-    <!-- tailwind cdn -->
+    <!-- daisy ui + tailwind cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -19,14 +20,280 @@
             extend: {
               colors: {
                 clifford: '#da373d',
+                'btn-primary': '#ABEF5F',
+                'btn-primary2': '#ABEF5F80'
               }
             }
           }
         }
       </script>
+      <style>
+        .font-manrope {
+          font-family: "Manrope", sans-serif;
+        }
+      </style>
 </head>
 
-<body>
+<body class="font-manrope w-full h-full overflow-x-hidden">
+  <!-- <section class="max-w-screen-xl mx-auto px-16 lg:px-28"></section> -->
+    <header class=" pb-8 overflow-x-hidden"> 
+        <!-- Navbar -->
+        <div class="w-4/5 mx-auto">
+            <div class="navbar">
+                <div class="navbar-start">
+                  <a class="font-bold text-2xl"><i class="fa fa-arrow-right -rotate-45 rounded-full bg-btn-primary mx-2 p-2" aria-hidden="true"></i>Rinterio</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                  <ul class="menu menu-horizontal px-1">
+                      <li class="menu-color"><a class="font-bold">Home</a></li>
+                      <li class="menu-color"><a>Services</a></li>
+                      <li class="menu-color"><a>Portfolio</a></li>
+                      <li class="menu-color"><a>Blogs</a></li>
+                      <li class="menu-color"><a>Contact Us</a></li>
+                  </ul>
+                </div>
+                <div class="navbar-end">
+                  <i class="fa fa-search bg-slate-100 p-2 rounded-full mx-2 hidden lg:flex" aria-hidden="true"></i>
+                  <i class="fa fa-shopping-cart rounded-full bg-slate-100 p-1 p-2 rounded-full  mx- hidden lg:flex" aria-hidden="true"></i>
+                  <a class="btn bg-btn-primary rounded-full hidden lg:flex mx-2 font-bold">Book Consult<i class="fa fa-arrow-right -rotate-45 rounded-full bg-black p-2 text-white" aria-hidden="true"></i></a>
+                  <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 6h16M4 12h8m-8 6h16" />
+                      </svg>
+                    </div>
+                    <ul
+                      tabindex="0"
+                      class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2">
+                      <li class="menu-color"><a>Home</a></li>
+                      <li class="menu-color"><a>Services</a></li>
+                      <li class="menu-color"><a>Portfolio</a></li>
+                      <li class="menu-color"><a>Blogs</a></li>
+                      <li class="menu-color"><a>Contact Us</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+        </div>
+
+        <!-- Banner Header -->
+         <div>
+          <div class="lg:w-4/5 mx-auto w-full ">
+            <div class="hero-content text-center">
+              <div class="lg:w-4/5 w-full mx-auto items-center ">
+                <img class="mx-auto" src="assets/banner.png" alt="A modern house">
+                <h1 class="text-5xl font-extrabold text-[#000000] w-full "><span>A barn house of this design has a</span> <br> <span>striking appearance</span></h1>
+                <p class="p-7 text-[#494949] text-base">
+                  This barn house design stands out with its striking appearance, combining rustic charm with modern elegance. Its rooflines and large windows create a perfect blend of tradition and contemporary style.
+                </p>
+                <button class="bg-btn-primary2 lg:w-auto p-2 w-full text-[#212121]  rounded-full font-bold text-xl">View Details<i class="fa fa-arrow-right -rotate-45 rounded-full bg-btn-primary mx-2 p-2  text-black" aria-hidden="true"></i></button>
+              </div>
+            </div>
+          </div>
+         </div>
+    </header>
+    <section>
+      <!-- section part 1 -->
+      <div class="flex flex-col lg:flex-row p-16 lg:p-24 bg-[#F4F4F4] w-full overflow-x-hidden">
+        <!-- text-content -->
+        <div class="flex-1">
+          <img class="invisible lg:visible" src="assets/Vector.png" alt="curved arrow">
+          <div class="text-center lg:text-start">
+            <button class="bg-white font-bold p-3 rounded-full lg:ml-10 mt-6 "><i class="fa fa-arrow-right p-1" aria-hidden="true"></i> About Us</button>
+          </div>
+          <h1 class="text-4xl font-extrabold text-[#212121] lg:w-3/4 lg:ml-10 mt-3 text-center mx-auto lg:text-left w-full"><span>We design thoughtful,</span> <br> <span> liveable spaces</span></h1>
+          <p class="py-3 text-[#494949] text-base text-center lg:ml-10 my-3 lg:w-10/12 lg:text-left w-full">We create spaces that is inviting, carefully balancing aesthetics and comfort to make every area feel like home.</p>
+           <!-- card 1 -->
+            <div class="flex lg:ml-10 p-3 mb-4 lg:w-10/12 bg-white rounded-xl pl-6 mx-auto w-full">
+              <div class="lg:my-auto my-0">
+                <img src="assets/commercial.png" alt="commercial">
+             </div>
+             <div class="px-5">
+               <h3 class="font-bold text-[#212121] text-xl">Commercial</h3>
+               <p class="w-5/6 text-base text-[#737373]">Commercial refers to activities connected with the exchange or trade of goods and services.</p>
+             </div>
+            </div>
+           <!-- card 2 -->
+            <div class="flex lg:ml-10 p-3  lg:w-10/12 bg-white rounded-xl pl-6 my-2 mx-auto w-full">
+              <div class="lg:my-auto my-0">
+                <img src="assets/residential.png" alt="residential">
+             </div>
+             <div class="px-5">
+               <h3 class="font-bold text-[#212121] text-xl">Residential</h3>
+               <p class=" text-base w-5/6 text-[#737373]">A residential neighborhood consists solely of private homes, without the presence of offices or industrial facilities.</p>
+             </div>
+            </div>
+        </div>
+         <!-- image-content -->
+          <div class="flex-1">
+            <img class="w-full p-1 lg:w-[510px]  mx-auto mt-16 lg:mx-16" src="assets/Rectangle.png" alt="modern house" />
+          </div>
+      </div>
+
+      <!-- section part 2 -->
+      <div class="bg-[#F4F4F4]">
+        <div class="hero py-2">
+          <div class="hero-content text-center">
+            <div class="w-3/4">
+              <button class="bg-white rounded-2xl p-2 my-6 font-bold"><i class="fa fa-arrow-right" aria-hidden="true"></i> How we works</button>
+              <h1 class="text-4xl font-extrabold">Our Works Process</h1>
+              <p class="py-6">Work process involves the guidelines and procedures followed to perform tasks in compliance with established standards and in a specific order.</p>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-4  md:grid-cols-2 gap-5  mx-auto w-10/12 pb-24">
+           <!-- card 1 -->
+            <div class="bg-[#E7C1D3] rounded-xl p-6 ">
+              <img src="assets/concept.png" alt="">
+              <h3 class="text-xl font-bold py-1">Concept</h3>
+              <p class="text-base text-[#494949]">A fundamental idea or principle underlying something.</p>
+            </div>
+           <!-- card 2 -->
+            <div class="bg-[#EFDA6E] rounded-xl p-6 ">
+              <img src="assets/flow-chart.png" alt="">
+              <h3 class=" font-bold text-xl py-1">Design Process</h3>
+              <p class="text-base text-[#494949]">Design process involves planning, creating, and refining solutions.</p>
+            </div>
+           <!-- card 3 -->
+            <div class="bg-[#A4DAC3] rounded-xl p-6 ">
+              <img src="assets/vision.png" alt="">
+              <h3 class="font-bold text-xl  py-1">Supervision</h3>
+              <p class="text-base text-[#494949]">Oversight of tasks to ensure proper execution and adherence to standards.</p>
+            </div>
+           <!-- card 4 -->
+            <div class="bg-[#77AAEA] rounded-xl  p-6">
+              <img src="assets/budget-planning.png" alt="">
+              <h3 class="font-bold text-xl py-1">Budget Planning</h3>
+              <p class="text-base text-[#494949]">Allocation and management of financial resources for projects and operations.</p>
+            </div>
+           
+        </div>
+      </div>
+      <!-- section part 3 -->
+      <div class="mb-[150px]">
+        <div class="hero py-6">
+          <div class="hero-content text-center">
+            <div class="w-3/4">
+              <button class="bg-btn-primary2 opacity-60 rounded-2xl p-2 my-6 text-[#1f1e1e] font-bold"><i class="fa fa-arrow-right" aria-hidden="true"></i> Explore our Latest works</button>
+              <h1 class="text-5xl font-bold">Our Latest Portfolio</h1>
+              <p class="py-6">
+                Explore our latest portfolio, showcasing innovative designs and successful projects that highlight our commitment to quality and creativity in every endeavor.</p>
+            </div>
+          </div>
+        </div>
+        <!-- image card sections-->
+        <div class="w-3/4 mx-auto">
+          <div class="lg:flex gap-5 mb-3">
+              <div class="lg:w-[800px] border rounded-lg rounded-md	my-4">
+                  <div class="hero">
+                      <div class="hero-content flex-col lg:flex-row">
+                         <img  class="lg:max-w-sm w-full rounded-lg h-[200px]" src="assets/img1.png" alt="home in hand"/>
+                        <div>
+                          <h1 class="text-2xl font-bold">Commercial</h1>
+                          <p class="py-4 text-base text-[#737373]">
+                            Commercial pertains to activities involved in the buying and selling of goods and services.
+                          </p>
+                          <a class="font-bold text-xl">View Details<i class="fa fa-arrow-right -rotate-45 rounded-full bg-btn-primary mx-2 p-2" aria-hidden="true"></i></a>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="lg:w-[400px] border rounded-md	my-4">
+                  <img class="mx-auto h-[200px] w-[300px] my-4" src="assets/img2.png" alt="ai home" />
+              </div>
+          </div>
+          
+          <div class="lg:flex gap-5">
+              <div class="lg:w-[320px] border rounded-md	my-4">
+                  <img class="mx-auto my-4 h-[200px] w-[220px]" src="assets/img3.png" alt="" />
+              </div>
+              <div class="lg:w-[600px] border rounded-md	my-4">
+                  <div class="hero">
+                      <div class="hero-content flex-col lg:flex-row">
+                        <img src="assets/img1.png" class="lg:max-w-sm w-[200px]  rounded-lg" />
+                        <div>
+                          <h1 class="text-2xl font-bold">Commercial</h1>
+                          <p class="py-3 text-base text-[#737373]">
+                            Commercial activities focus on the transaction and trade of products and services.
+                          </p>
+                          <a class="font-bold text-xl">View Details<i class="fa fa-arrow-right -rotate-45 rounded-full bg-btn-primary p-2 mx-2" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="lg:w-[320px] border rounded-md my-4">
+                  <img class="mx-auto h-[200px] w-[220px] my-4" src="assets/img5.png" alt="no img found" />
+              </div>
+          </div> 
+      </div>
+      </div>
+      <!-- section part 4 -->
+      <div class="w-full h-full bg-no-repeat bg-cover bg-left bg-fixed" 
+      style="background-image: url(/assets/bg.png);">
+        <div class="hero py-5">
+          <div class="hero-content text-center">
+            <div class="w-full lg:w-3/4 ">
+              <button class="bg-btn-primary2 opacity-60 font-bold rounded-2xl p-2 my-6  text-[#494949]"><i class="fa fa-arrow-right" aria-hidden="true"></i> Let’s Connect</button>
+              <h1 class="font-extrabold text-4xl  text-[#212121]">Let’s Discuss Next Project</h1>
+              <p class="py-8 text-base text-[#494949]">
+                Let’s discuss the next project, focusing on objectives, strategies, and key details to ensure a successful outcome and smooth execution.</p>
+            </div>
+          </div>
+        </div>
+        <!-- input field -->  
+        <section class="flex items-center justify-center ">
+          <div class=" p-8 w-full rounded-lg lg:w-3/4 text-center"
+              <form>
+                  <div class="lg:flex gap-6 mb-2  ">
+                      <input 
+                          type="text" 
+                          placeholder="First Name*" 
+                          class="w-full my-2 p-3 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-orange-500"
+                      />
+                      <input 
+                          type="text" 
+                          placeholder="Last Name*" 
+                          class="w-full my-2 p-3 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-orange-500"
+                      />
+                  </div>
+                  <div class="lg:flex mb-2 gap-6 ">
+                      <input 
+                          type="email" 
+                          placeholder="Phone Number*" 
+                          class="w-full my-2 p-3 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-orange-500"
+                      />
+                      <input 
+                          type="email" 
+                          placeholder="Email Number*" 
+                          class="w-full my-2 p-3  border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-orange-500"
+                      />
+                  </div>
+                  <div class="mb-4">
+                      <textarea 
+                          placeholder="Write your message here" 
+                          class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 h-32"
+                      ></textarea>
+                  </div>
+                  <button 
+                      type="submit" 
+                      class="w-full font-bold bg-btn-primary text-[#1C1C1C] p-3 rounded-lg hover:bg-orange-500 transition-colors duration-300 ">
+                      Send Mail <i class="fa fa-arrow-right -rotate-45 rounded-full bg-[#1C1C1C] p-2 text-white" aria-hidden="true"></i>
+                  </button>
+              </form>
+           </div>
+        </section>
+      </div>
+    </section>
+
 
 </body>
 
